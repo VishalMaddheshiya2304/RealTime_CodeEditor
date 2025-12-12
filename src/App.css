@@ -715,3 +715,87 @@ footer a:hover {
     font-size: 14px;
   }
 }
+
+/* ================================
+   FULL RESPONSIVE LAYOUT FIX
+   ================================ */
+@media (max-width: 768px) {
+
+  /* Main layout becomes vertical */
+  .mainWrap {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  /* Sidebar moves to top */
+  .aside {
+    width: 100% !important;
+    height: auto !important;
+    border-right: none;
+    border-bottom: 1px solid #424242;
+    padding: 12px;
+  }
+
+  .asideInner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Clients list scrolls horizontally */
+  .clientsList {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 6px 0;
+  }
+
+  .client {
+    flex-direction: column;
+    min-width: 70px;
+    text-align: center;
+  }
+
+  /* Run button becomes full width */
+  .runCodeBtn,
+  .copyBtn,
+  .leaveBtn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Editor section takes full screen width */
+  .editorSection {
+    width: 100%;
+    height: auto;
+    grid-template-rows: 1fr 200px;
+  }
+
+  .editorWrap {
+    height: 60vh;
+  }
+
+  .outputWrap {
+    height: 200px;
+  }
+}
+
+/* Ultra-small screens (phones < 480px) */
+@media (max-width: 480px) {
+
+  .runCodeBtn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .client .sb-avatar {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .outputSectionHeader {
+    font-size: 12px;
+  }
+}
