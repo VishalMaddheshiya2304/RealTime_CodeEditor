@@ -12,7 +12,7 @@ export const initSocket = async () => {
     };
     
     // Use environment variable or fallback to localhost
-    const serverUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+ const serverUrl = process.env.REACT_APP_BACKEND_URL || "https://realtime-codeeditor-backend-dohk.onrender.com";
     
     return new Promise((resolve, reject) => {
         const socket = io(serverUrl, options);
